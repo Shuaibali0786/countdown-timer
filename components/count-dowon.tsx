@@ -4,8 +4,6 @@ import { useState, useRef, useEffect, ChangeEvent } from "react"
 
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components//ui/button";
-import { time } from "console";
-import { Target } from "lucide-react";
 
 export default function countdown () {
     let [duration, setDuration,] = useState<number | string>("");
