@@ -6,13 +6,13 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components//ui/button";
 
 export default function countdown () {
-    let [duration, setDuration,] = useState<number | string>("");
-    let [timeLeft, setTimeLeft] = useState<number> (0);
-    let [isActive, setIsActive]= useState<boolean>(false);
-    let [isPaused, setIsPaused]= useState<boolean>(false);
-    let timerRef = useRef<NodeJS.Timeout |null>(null);
+    const [duration, setDuration,] = useState<number | string>("");
+    const [timeLeft, setTimeLeft] = useState<number> (0);
+    const [isActive, setIsActive]= useState<boolean>(false);
+    const [isPaused, setIsPaused]= useState<boolean>(false);
+    const timerRef = useRef<NodeJS.Timeout |null>(null);
 
-    let handleSetDuration = (): void => {
+    let handleSetDuration = (): void =>{
         if (typeof duration === "number" && duration>0){
             setTimeLeft(duration);
             setIsActive(false);
